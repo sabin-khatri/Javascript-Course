@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Making Example</title>
+</head>
+<body>
+    <h1>Weather Activity Suggestion</h1>
+    <p id="weatherMessage"></p>
+
+    <script>
+        const temperature = parseInt(prompt("Enter the current temperature (°C):"));
+
+        let message = `Temperature: ${temperature}°C - `;
+
+        if (temperature <= 0) {
+            message += "It's freezing! Stay indoors and drink hot tea.";
+        } else if (temperature > 0 && temperature <= 15) {
+            message += "It's cold outside. Wear warm clothes!";
+        } else if (temperature > 15 && temperature <= 25) {
+            message += "The weather is pleasant. Perfect for a walk!";
+        } else if (temperature > 25 && temperature <= 35) {
+            message += "It's warm. Stay hydrated and wear light clothes.";
+        } else {
+            message += "It's really hot! Stay cool and avoid direct sunlight.";
+        }
+
+        console.log(message);
+        document.getElementById("weatherMessage").innerText = message;
+    </script>
+</body>
+</html>
