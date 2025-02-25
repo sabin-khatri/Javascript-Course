@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+</head>
+<body>
+    <h1>Vehicle Fuel Type Checker</h1>
+    <p id="vehicleMessage"></p>
+
+    <script>
+        // Prompt user to enter vehicle type
+        const vehicleType = prompt("Enter your vehicle type (Car, Bike, Truck, Bus):").toLowerCase();
+
+        let message = `Vehicle Type: ${vehicleType.toUpperCase()} - `;
+
+        switch (vehicleType) {
+            case 'car':
+                message += "Fuel Type: Petrol or Diesel";
+                break;
+            case 'bike':
+                message += "Fuel Type: Petrol";
+                break;
+            case 'truck':
+                message += "Fuel Type: Diesel";
+                break;
+            case 'bus':
+                message += "Fuel Type: Diesel or CNG";
+                break;
+            default:
+                message += "Invalid vehicle type entered.";
+        }
+
+        console.log(message);
+        document.getElementById("vehicleMessage").innerText = message;
+    </script>
+</body>
+</html>
