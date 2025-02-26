@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach Loop Example</title>
+</head>
+<body>
+    <h2>List of Colors</h2>
+    <ul id="colorList"></ul>
+
+    <script>
+        const colors = ['Red', 'Blue', 'Green', 'Yellow', 'Purple'];
+        let list = document.getElementById("colorList");
+
+        colors.forEach((color, index) => {
+            console.log(`Color ${index + 1}: ${color}`);
+
+            // Create a list item and add to the webpage
+            let listItem = document.createElement("li");
+            listItem.textContent = color;
+            list.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
