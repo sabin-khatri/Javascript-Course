@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Example</title>
+</head>
+<body>
+    <h2>Numbers from 1 to 5</h2>
+    <ul id="numberList"></ul>
+
+    <script>
+        let count = 1;
+        let list = document.getElementById("numberList");
+
+        while (count <= 5) {
+            let listItem = document.createElement("li");
+            listItem.textContent = "Number: " + count;
+            list.appendChild(listItem);
+            count++;
+        }
+    </script>
+</body>
+</html>
